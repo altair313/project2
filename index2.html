@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Movies App</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search for movies...">
+                <div id="autoSuggest" class="auto-suggest"></div>
+            </div>
+            <div class="sort-container">
+                <select id="sortSelect">
+                    <option value="popularity">Popularity</option>
+                    <option value="release_date">Release Date</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </div>
+            <button id="watchlistBtn" class="watchlist-btn">
+                <i class="fas fa-bookmark"></i> Watchlist
+            </button>
+        </nav>
+    </header>
+    
+    <main>
+        <div id="movieGrid" class="movie-grid"></div>
+    </main>
+
+    <!-- Movie Details Modal -->
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="movieDetails" class="movie-details">
+                <!-- Movie details will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Watchlist Modal -->
+    <div id="watchlistModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>My Watchlist</h2>
+            <div id="watchlistContent" class="watchlist-content">
+                <!-- Watchlist items will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
