@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Meal For Your Ingredients</title>
+  <!-- Подключение иконок Font Awesome для использования иконок в кнопках -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+  <!-- Подключение стилей из внешнего файла style.css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Основной контейнер для всего содержимого -->
+  <div class="container">
+    
+    <!-- Обёртка для разделов с поиском блюд и результатами -->
+    <div class="meal-wrapper">
+
+      <!-- Раздел поиска блюда по ингредиентам -->
+      <div class="meal-search">
+        <h2 class="title">Find Meals For Your Ingredients</h2>
+        <blockquote>War is war,but lunch is on schedule!.<br>
+          <cite>-my favorite phrase</cite>
+        </blockquote>
+
+        <!-- Поле для ввода ингредиента и кнопка поиска -->
+        <div class="meal-search-box">
+          <input type="text" class="search-control" placeholder="Enter an ingredient" id="search-input">
+          <button type="submit" class="search-btn btn" id="search-btn">
+            <i class="fas fa-search"></i> <!-- Иконка поиска -->
+          </button>
+        </div>
+      </div>
+
+      <!-- Раздел для отображения результатов поиска -->
+      <div class="meal-result">
+        <h2 class="title">Your Search Results:</h2>
+        
+        <!-- Контейнер для динамически загружаемых блюд -->
+        <div id="meal">
+
+          <!-- Пример одного блока с блюдом, который будет заменён динамическим контентом -->
+          <div class="meal-item">
+            <div class="meal-img">
+              <img src="food.jpg" alt="food">
+            </div>
+            <div class="meal-name">
+              <h3>Potato Chips</h3>
+              <a href="#" class="recipe-btn">Get Recipe</a>
+            </div>
+          </div> 
+
+        </div>
+      </div>
+
+      <!-- Модальное окно для отображения информации о блюде -->
+      <div class="meal-details">
+
+        <!-- Кнопка закрытия модального окна -->
+        <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+          <i class="fas fa-times"></i> <!-- Иконка закрытия -->
+        </button>
+
+        <!-- Контейнер для содержимого модального окна с информацией о рецепте -->
+        <div class="meal-details-content">
+          <h2 class="recipe-title">Meals Name Here</h2> <!-- Название блюда -->
+          <p class="recipe-category">Category Name</p> <!-- Категория блюда -->
+          
+          <!-- Инструкции приготовления блюда -->
+          <div class="recipe-instruct">
+            <h3>Instructions:</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+          </div>
+
+          <!-- Картинка блюда в модальном окне -->
+          <div class="recipe-meal-img">
+            <img src="food.jpg" alt="">
+          </div>
+
+          <!-- Ссылка на видео с рецептом на YouTube -->
+          <div class="recipe-link">
+            <a href="#" target="_blank">Watch Video</a>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подключение внешнего JavaScript файла script.js -->
+  <script src="script.js"></script>
+</body>
+</html>
